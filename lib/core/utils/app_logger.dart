@@ -1,0 +1,66 @@
+import 'dart:developer' as developer;
+
+/// Lightweight logging utility for the Flixora application.
+///
+/// Wraps [dart:developer] log with severity-level prefixes
+/// and a consistent tag format for easy filtering in console output.
+class AppLogger {
+  AppLogger._();
+
+  static const String _tag = 'Flixora';
+
+  /// Logs an informational message.
+  static void info(String message, {String? tag}) {
+    developer.log(
+      '💡 INFO: $message',
+      name: tag ?? _tag,
+    );
+  }
+
+  /// Logs a debug message.
+  static void debug(String message, {String? tag}) {
+    developer.log(
+      '🐛 DEBUG: $message',
+      name: tag ?? _tag,
+    );
+  }
+
+  /// Logs a warning message.
+  static void warning(String message, {String? tag}) {
+    developer.log(
+      '⚠️ WARNING: $message',
+      name: tag ?? _tag,
+    );
+  }
+
+  /// Logs an error message with optional [error] and [stackTrace].
+  static void error(
+    String message, {
+    String? tag,
+    Object? error,
+    StackTrace? stackTrace,
+  }) {
+    developer.log(
+      '❌ ERROR: $message',
+      name: tag ?? _tag,
+      error: error,
+      stackTrace: stackTrace,
+    );
+  }
+
+  /// Logs network-related activity.
+  static void network(String message, {String? tag}) {
+    developer.log(
+      '🌐 NETWORK: $message',
+      name: tag ?? _tag,
+    );
+  }
+
+  /// Logs database-related activity.
+  static void database(String message, {String? tag}) {
+    developer.log(
+      '🗄️ DATABASE: $message',
+      name: tag ?? _tag,
+    );
+  }
+}
