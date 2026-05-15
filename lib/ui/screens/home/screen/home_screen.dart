@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:flixora/bloc/home/home_cubit.dart';
-import 'package:flixora/bloc/home/home_state.dart';
+import 'package:flixora/logic/cubit/home/home_cubit.dart';
+import 'package:flixora/logic/cubit/home/home_state.dart';
 import 'package:flixora/core/constants/app_theme.dart';
 import 'package:flixora/ui/widgets/banner_carousel.dart';
 import 'package:flixora/ui/widgets/error_display.dart';

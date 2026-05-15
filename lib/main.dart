@@ -5,8 +5,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
-import 'package:flixora/bloc/movie_bloc.dart';
-import 'package:flixora/bloc/watchlist/watchlist_cubit.dart';
+import 'package:flixora/logic/bloc/movie/movie_bloc.dart';
+import 'package:flixora/logic/cubit/watchlist/watchlist_cubit.dart';
 import 'package:flixora/core/constants/app_constants.dart';
 import 'package:flixora/core/constants/app_theme.dart';
 import 'package:flixora/core/routes/app_routes.dart';

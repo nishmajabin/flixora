@@ -1,69 +1,23 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'package:flixora/bloc/navigation/navigation_cubit.dart';
 import 'package:flixora/core/constants/app_theme.dart';
-import 'package:flixora/ui/screens/downloads_screen.dart';
-import 'package:flixora/ui/screens/home_screen.dart';
-import 'package:flixora/ui/screens/profile_screen.dart';
-import 'package:flixora/ui/screens/search_screen.dart';
-import 'package:flixora/ui/screens/watchlist_screen.dart';
+import 'package:flixora/ui/screens/bottom_nav/nav_item.dart';
+import 'package:flutter/material.dart';
 
-/// Main app shell with persistent bottom navigation bar.
-///
-/// Uses [IndexedStack] to keep tab state alive across switches.
-/// Navigation index is driven by [NavigationCubit].
-class MainShell extends StatelessWidget {
-  const MainShell({super.key});
-
-  static const _screens = [
-    HomeScreen(),
-    SearchScreen(),
-    WatchlistScreen(),
-    DownloadsScreen(),
-    ProfileScreen(),
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return BlocBuilder<NavigationCubit, int>(
-      builder: (context, currentIndex) {
-        return Scaffold(
-          backgroundColor: AppTheme.scaffoldBackground,
-          extendBody: true,
-          body: IndexedStack(
-            index: currentIndex,
-            children: _screens,
-          ),
-          bottomNavigationBar: _AnimatedBottomNav(
-            currentIndex: currentIndex,
-            onTap: (index) {
-              context.read<NavigationCubit>().updateTab(index);
-            },
-          ),
-        );
-      },
-    );
-  }
-}
-
-// ── Animated Bottom Navigation Bar ────────────────────────────────────────────
-
-class _AnimatedBottomNav extends StatelessWidget {
+class AnimatedBottomNav extends StatelessWidget {
   final int currentIndex;
   final ValueChanged<int> onTap;
 
-  const _AnimatedBottomNav({
+  const AnimatedBottomNav({
     required this.currentIndex,
     required this.onTap,
+    super.key
   });
 
   static const _items = [
-    _NavItem(icon: Icons.home_rounded, activeIcon: Icons.home_rounded, label: 'Home'),
-    _NavItem(icon: Icons.search_rounded, activeIcon: Icons.search_rounded, label: 'Search'),
-    _NavItem(icon: Icons.bookmark_border_rounded, activeIcon: Icons.bookmark_rounded, label: 'Watchlist'),
-    _NavItem(icon: Icons.download_outlined, activeIcon: Icons.download_rounded, label: 'Downloads'),
-    _NavItem(icon: Icons.person_outline_rounded, activeIcon: Icons.person_rounded, label: 'Profile'),
+    BottomNavItem(icon: Icons.home_rounded, activeIcon: Icons.home_rounded, label: 'Home'),
+    BottomNavItem(icon: Icons.search_rounded, activeIcon: Icons.search_rounded, label: 'Search'),
+    BottomNavItem(icon: Icons.bookmark_border_rounded, activeIcon: Icons.bookmark_rounded, label: 'Watchlist'),
+    BottomNavItem(icon: Icons.download_outlined, activeIcon: Icons.download_rounded, label: 'Downloads'),
+    BottomNavItem(icon: Icons.person_outline_rounded, activeIcon: Icons.person_rounded, label: 'Profile'),
   ];
 
   @override
@@ -146,16 +100,4 @@ class _AnimatedBottomNav extends StatelessWidget {
       ),
     );
   }
-}
-
-class _NavItem {
-  final IconData icon;
-  final IconData activeIcon;
-  final String label;
-
-  const _NavItem({
-    required this.icon,
-    required this.activeIcon,
-    required this.label,
-  });
 }

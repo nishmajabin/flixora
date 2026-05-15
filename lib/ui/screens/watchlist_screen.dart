@@ -2,8 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:flixora/bloc/watchlist/watchlist_cubit.dart';
-import 'package:flixora/bloc/watchlist/watchlist_state.dart';
+import 'package:flixora/logic/cubit/watchlist/watchlist_cubit.dart';
+import 'package:flixora/logic/cubit/watchlist/watchlist_state.dart';
 import 'package:flixora/core/constants/app_theme.dart';
 import 'package:flixora/core/routes/app_routes.dart';
 import 'package:flixora/core/utils/image_url_helper.dart';

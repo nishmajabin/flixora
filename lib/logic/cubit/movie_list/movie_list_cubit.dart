@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:flixora/bloc/movie_list_cubit_state.dart';
+import 'package:flixora/logic/cubit/movie_list/movie_list_cubit_state.dart';
 
 /// Cubit that owns **all** UI-level resources for [MovieListScreen].
 ///

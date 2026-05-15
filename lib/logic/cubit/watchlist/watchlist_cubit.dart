@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:flixora/bloc/watchlist/watchlist_state.dart';
+import 'package:flixora/logic/cubit/watchlist/watchlist_state.dart';
 import 'package:flixora/core/utils/app_logger.dart';
 import 'package:flixora/data/models/movie_model.dart';
 import 'package:flixora/data/services/movie_repository.dart';

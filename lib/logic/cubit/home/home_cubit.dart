@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:flixora/bloc/home/home_state.dart';
+import 'package:flixora/logic/cubit/home/home_state.dart';
 import 'package:flixora/core/utils/app_logger.dart';
 import 'package:flixora/data/services/movie_repository.dart';
 

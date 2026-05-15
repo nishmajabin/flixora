@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:flixora/bloc/movie_event.dart';
-import 'package:flixora/bloc/movie_state.dart';
+import 'package:flixora/logic/bloc/movie/movie_event.dart';
+import 'package:flixora/logic/bloc/movie/movie_state.dart';
 import 'package:flixora/core/utils/api_exception.dart';
 import 'package:flixora/core/utils/app_logger.dart';
 import 'package:flixora/data/services/movie_repository.dart';

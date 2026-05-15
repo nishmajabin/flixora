@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:flixora/bloc/movie_detail_state.dart';
+import 'package:flixora/logic/cubit/movie_detail/movie_detail_state.dart';
 import 'package:flixora/core/utils/api_exception.dart';
 import 'package:flixora/core/utils/app_logger.dart';
 import 'package:flixora/data/models/cast_model.dart';
