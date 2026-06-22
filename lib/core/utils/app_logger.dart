@@ -9,31 +9,27 @@ class AppLogger {
 
   static const String _tag = 'Flixora';
 
-  /// Logs an informational message.
   static void info(String message, {String? tag}) {
     developer.log(
-      '💡 INFO: $message',
+      'INFO: $message',
       name: tag ?? _tag,
     );
   }
 
-  /// Logs a debug message.
   static void debug(String message, {String? tag}) {
     developer.log(
-      '🐛 DEBUG: $message',
+      'DEBUG: $message',
       name: tag ?? _tag,
     );
   }
 
-  /// Logs a warning message.
   static void warning(String message, {String? tag}) {
     developer.log(
-      '⚠️ WARNING: $message',
+      'WARNING: $message',
       name: tag ?? _tag,
     );
   }
 
-  /// Logs an error message with optional [error] and [stackTrace].
   static void error(
     String message, {
     String? tag,
@@ -41,25 +37,23 @@ class AppLogger {
     StackTrace? stackTrace,
   }) {
     developer.log(
-      '❌ ERROR: $message',
+      'ERROR: $message',
       name: tag ?? _tag,
       error: error,
       stackTrace: stackTrace,
     );
   }
 
-  /// Logs network-related activity.
   static void network(String message, {String? tag}) {
     developer.log(
-      '🌐 NETWORK: $message',
+      'NETWORK: $message',
       name: tag ?? _tag,
     );
   }
 
-  /// Logs database-related activity.
   static void database(String message, {String? tag}) {
     developer.log(
-      '🗄️ DATABASE: $message',
+      'DATABASE: $message',
       name: tag ?? _tag,
     );
   }

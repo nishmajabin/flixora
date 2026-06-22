@@ -39,7 +39,7 @@ void main() async {
   await databaseHelper.initDatabase();
 
   final cachedMovies = await databaseHelper.getCachedMovies();
-  debugPrint('[Flixora] 🗄️ STARTUP: Found ${cachedMovies.length} cached movies in DB.');
+  debugPrint('${cachedMovies.length} cached movies in DB.');
 
   final apiService = MovieApiServiceImpl();
 

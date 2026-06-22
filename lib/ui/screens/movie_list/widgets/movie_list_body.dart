@@ -11,7 +11,7 @@ import 'package:flixora/ui/screens/movie_list/widgets/movie_list_inline_error.da
 import 'package:flixora/ui/widgets/bottom_loader.dart';
 import 'package:flixora/ui/widgets/error_display.dart';
 import 'package:flixora/ui/widgets/movie_card.dart';
-import 'package:flixora/ui/widgets/shimmer_loading.dart';
+import 'package:flixora/ui/widgets/shimmer/movie_list_shimmer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

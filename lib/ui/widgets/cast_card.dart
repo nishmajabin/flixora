@@ -5,7 +5,7 @@ import 'package:flixora/core/constants/app_theme.dart';
 import 'package:flixora/core/utils/image_url_helper.dart';
 import 'package:flixora/data/models/cast_model.dart';
 
-/// A card displaying a cast member's photo, name, and character.
+/// A card displaying a cast member's photo, name, and character.+ 
 class CastCard extends StatelessWidget {
   final CastMember cast;
 
@@ -17,7 +17,7 @@ class CastCard extends StatelessWidget {
         ? ImageUrlHelper.getPosterUrl(cast.profilePath, size: '/w185')
         : null;
 
-    return Container(
+    return Container( 
       width: 80,
       margin: const EdgeInsets.only(right: 12),
       child: Column(

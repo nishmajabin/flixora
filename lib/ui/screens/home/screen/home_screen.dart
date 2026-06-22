@@ -1,13 +1,13 @@
+import 'package:flixora/ui/widgets/shimmer/home_shimmer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:flixora/logic/cubit/home/home_cubit.dart';
 import 'package:flixora/logic/cubit/home/home_state.dart';
 import 'package:flixora/core/constants/app_theme.dart';
-import 'package:flixora/ui/widgets/banner_carousel.dart';
+import 'package:flixora/ui/widgets/banner_carousel/banner_carousel.dart';
 import 'package:flixora/ui/widgets/error_display.dart';
-import 'package:flixora/ui/widgets/movie_section.dart';
-import 'package:flixora/ui/widgets/shimmer_loading.dart';
+import 'package:flixora/ui/widgets/movie_section/movie_section.dart';
 
 /// OTT-style home screen with banner carousel and horizontal movie sections.
 class HomeScreen extends StatelessWidget {

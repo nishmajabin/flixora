@@ -6,9 +6,9 @@ import 'package:flixora/logic/cubit/navigation/navigation_cubit.dart';
 import 'package:flixora/core/constants/app_theme.dart';
 import 'package:flixora/ui/screens/downloads/screen/downloads_screen.dart';
 import 'package:flixora/ui/screens/home/screen/home_screen.dart';
-import 'package:flixora/ui/screens/profile_screen.dart';
-import 'package:flixora/ui/screens/search_screen.dart';
-import 'package:flixora/ui/screens/watchlist_screen.dart';
+import 'package:flixora/ui/screens/profile/screen/profile_screen.dart';
+import 'package:flixora/ui/screens/search/screen/search_screen.dart';
+import 'package:flixora/ui/screens/watchlist/screen/watchlist_screen.dart';
 
 class MainShell extends StatelessWidget {
   const MainShell({super.key});

@@ -1,11 +1,11 @@
 import 'package:flixora/ui/screens/movie_detail/widgets/movie_detail_content.dart';
+import 'package:flixora/ui/widgets/shimmer/movie_detail_shimmer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flixora/logic/cubit/movie_detail/movie_detail_cubit.dart';
 import 'package:flixora/logic/cubit/movie_detail/movie_detail_state.dart';
 import 'package:flixora/core/constants/app_theme.dart';
 import 'package:flixora/ui/widgets/error_display.dart';
-import 'package:flixora/ui/widgets/shimmer_loading.dart';
 
 class MovieDetailScreen extends StatelessWidget {
   final int movieId;

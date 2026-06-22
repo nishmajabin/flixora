@@ -17,9 +17,6 @@ class MovieListScreen extends StatelessWidget {
     // Fire initial load once — MovieBloc ignores this if already loaded/loading.
     context.read<MovieBloc>().add(const FetchMovies());
 
-    // Register the scroll listener once here, using the cubit-owned controller.
-    // BlocListener fires only on state changes (not every build), so this
-    // listener registration runs exactly once per screen mount.
     return BlocListener<MovieListCubit, MovieListState>(
       listenWhen: (prev, curr) => prev.isSearchActive != curr.isSearchActive,
       listener: (context, listUiState) {
@@ -48,7 +45,6 @@ class MovieListScreen extends StatelessWidget {
     );
   }
 
-  /// Dispatches [FetchMoreMovies] when the user scrolls near the bottom.
   static void _onScroll(BuildContext context, MovieListCubit cubit) {
     final controller = cubit.scrollController;
     if (!controller.hasClients) return;

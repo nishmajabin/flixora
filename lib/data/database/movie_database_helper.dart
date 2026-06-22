@@ -8,9 +8,6 @@ abstract class MovieDatabaseHelper {
   /// Initializes the database and creates tables if they don't exist.
   Future<void> initDatabase();
 
-  /// Caches a list of movies to the local database.
-  ///
-  /// If [clearExisting] is true, existing cached movies are removed first.
   Future<void> cacheMovies(List<Movie> movies, {bool clearExisting = false});
 
   /// Retrieves all cached movies from the local database.

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'package:flixora/logic/cubit/home/home_cubit.dart';
 import 'package:flixora/logic/cubit/movie_detail/movie_detail_cubit.dart';
 import 'package:flixora/logic/cubit/movie_list/movie_list_cubit.dart';
@@ -10,13 +9,12 @@ import 'package:flixora/data/services/movie_repository.dart';
 import 'package:flixora/ui/screens/bottom_nav/main_shell.dart';
 import 'package:flixora/ui/screens/movie_detail/screen/movie_detail_screen.dart';
 import 'package:flixora/ui/screens/movie_list/screen/movie_list_screen.dart';
-import 'package:flixora/ui/screens/splash_screen.dart';
+import 'package:flixora/ui/screens/splash/screen/splash_screen.dart';
 
 class AppRouter {
   AppRouter._();
 
-  /// Generates routes based on [RouteSettings].
-  static Route<dynamic> generateRoute(RouteSettings settings) {
+  static Route<dynamic> generateRoute(RouteSettings settings){
     switch (settings.name) {
       // ── Splash ──────────────────────────────────────────────────────────
       case AppRoutes.splash:

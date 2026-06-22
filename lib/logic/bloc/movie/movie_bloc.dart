@@ -8,18 +8,12 @@ import 'package:flixora/core/utils/api_exception.dart';
 import 'package:flixora/core/utils/app_logger.dart';
 import 'package:flixora/data/services/movie_repository.dart';
 
-/// BLoC responsible for managing the movie list and search state.
-///
-/// Handles trending movies, pagination, pull-to-refresh,
-/// and TMDB search with debounce.
+
 class MovieBloc extends Bloc<MovieEvent, MovieState> {
   final MovieRepository _repository;
 
-  /// Stores the last loaded trending state so we can restore it
-  /// when the user clears the search.
   MovieLoaded? _lastTrendingState;
 
-  /// Debounce timer for search input.
   Timer? _debounce;
 
   MovieBloc({required MovieRepository repository})

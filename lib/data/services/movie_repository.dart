@@ -38,19 +38,11 @@ class MovieRepository {
   }
 
   // ── Popular Movies ──────────────────────────────────────────────────────
-
-  /// Fetches popular movies with cache fallback.
-  ///
-  /// Page 1: atomically clears and replaces cache (inside cacheMovies).
-  /// Page 2+: appends to existing cache.
-  /// On failure: falls back to whatever is in the cache.
   Future<List<Movie>> getPopularMovies({int page = 1}) async {
     try {
       AppLogger.info('Fetching movies from API (page $page)...');
       final movies = await _apiService.getPopularMovies(page: page);
 
-      // Cache results — clear+replace on page 1, append on page 2+
-      // This is atomic via a DB transaction, so old data survives if insert fails
       await _databaseHelper.cacheMovies(
         movies,
         clearExisting: page == 1,
